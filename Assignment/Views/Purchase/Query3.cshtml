@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Query3";
+}
+
+<br />
+<br />
+<h4 class="text-center text-uppercase">Product sales report Month wise</h4>
+<table class="table">
+    <tr>
+        <th>Month</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Date.ToString("MMMM")- @item.Date.Year</td>
+            <td>@item.ProductName.Name</td>
+
+            <td>@item.Quantity.Qty</td>
+        </tr>
+    }
+</table>

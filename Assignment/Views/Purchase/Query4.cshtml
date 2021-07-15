@@ -1,0 +1,25 @@
+﻿
+
+@{
+    ViewBag.Title = "Query4";
+}
+<br />
+<br />
+
+<h4 class="text-center text-uppercase">MaximumOrderPriceMonthWise</h4>
+<table class="table">
+    <tr>
+        <th>Date Of Purchase</th>
+        <th>POID</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Date.ToString("MMMM")- @item.Date.Year</td>
+            <td>@item.POID.POID</td>
+
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>
